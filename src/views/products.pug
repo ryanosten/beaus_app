@@ -7,13 +7,10 @@ block content
   .container-fluid.bgd-color
     .container
       div.row
-        each beer in beers
-          div.col-md-4.col-sm-6.text-center.mt-5.px-3
-            - var thumb = beer.thumbnail
-            - var id = beer.id
-              a(href='/products/' + id + '')
-                img(src='' + thumb + '')
-                p.mt-4 #{beer.name}
+        div.col-md-4
+          - var beer_image = beer.image
+            img.max-100(src='' + beer_image + '')
+        div.col-md-8
   // jQuery first, then Tether, then Bootstrap JS.
   script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
   |
