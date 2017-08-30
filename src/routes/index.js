@@ -35,7 +35,7 @@ router.get('/products/:id', (req, res) => {
       let beer_json = JSON.parse(response).product;
       let stores_json = JSON.parse(response).result;
       if(beer_json.tasting_note === null) {
-        beer_json.tasting_note = 'Sorry, we were too lazy to create a description for this beer. But trust us, it\'s fucking delicious!'
+        beer_json.tasting_note = 'Sorry, we were too lazy to create a description for this beer. But trust us, it\'s delicious!'
       }
 
       var beer = {
