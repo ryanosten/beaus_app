@@ -38,7 +38,7 @@ router.get('/products/:id', (req, res) => {
         beer_json.tasting_note = 'Sorry, we were too lazy to create a description for this beer. But trust us, it\'s fucking delicious!'
       }
 
-      let beer = {
+      var beer = {
         name: beer_json.name,
         image: beer_json.image_url,
         //used tasting note bc description was null for all objects returned by API
@@ -59,9 +59,11 @@ router.get('/products/:id', (req, res) => {
               telephone: store_json.telephone
             }
             stores.push(store_obj);
+            if(stores.length == stores_json.length){
+              res.render('products', {beer: beer, stores: stores});
+            }
           })
       }
-      res.render('products', {beer: beer, stores: stores});
     });
 })
 

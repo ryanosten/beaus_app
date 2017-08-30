@@ -5,3 +5,16 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+.custom-nav {
+  background-color: #4C2D1E;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+h1 {
+  color: white;
+  font-family: "Abril Fatface", "open sans";
+}

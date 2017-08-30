@@ -1,28 +1,23 @@
 extends layout.pug
 
 block content
-  nav.navbar.navbar-light.bg-faded
-    a.navbar-brand(href='#') Navbar
-
   .container-fluid.bgd-color
     .container
       div.row
-        div.col-md-4
+        div.col-md-4.mt-5
           - var beer_image = beer.image
             img.max-100(src='' + beer_image + '')
         div.col-md-8
           h4.mt-5 Description
           p #{beer.description}
+      div.row.text-center
+        div.col-12
+          h4.mt-5.text-center Stores Available
       div.row
         each store in stores
-          div.col-md-3
-            p #{store.name}
-            p #{store.address}
-            p #{store.city}, #{store.postal_code}
-            p #{store.telephone}
-  // jQuery first, then Tether, then Bootstrap JS.
-  script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
-  |
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
-  |
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+          div.col-md-3.mt-5
+            h5 #{store.name}
+            p.mb-0 #{store.address}
+            p.mb-0 #{store.city}, #{store.postal_code}
+            p.mb-0 #{store.telephone}
+  
