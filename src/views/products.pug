@@ -8,7 +8,8 @@ block content
           - var beer_image = beer.image
             img.max-100(src='' + beer_image + '')
         div.col-md-8
-          h4.mt-5 Description
+          h2.mt-5 #{beer.name}
+          h5.mt-4 Description
           p #{beer.description}
       div.row.text-center
         div.col-12
@@ -20,4 +21,3 @@ block content
             p.mb-0 #{store.address}
             p.mb-0 #{store.city}, #{store.postal_code}
             p.mb-0 #{store.telephone}
-  
