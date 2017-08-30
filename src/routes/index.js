@@ -4,6 +4,9 @@ const express = require('express');
 const router = express.Router();
 const request = require('request-promise');
 
+function getStores(){
+
+}
 //handle get request to '/ route
 router.get('/', (req, res) => {
   //make api call
@@ -21,7 +24,6 @@ router.get('/', (req, res) => {
           beers.push(beer_obj);
         }
       }
-      console.log(beer_json);
     res.render('index', {beers: beers});
     });
 });
@@ -35,6 +37,7 @@ router.get('/products/:id', (req, res) => {
       if(beer_json.tasting_note === null) {
         beer_json.tasting_note = 'Sorry, we were too lazy to create a description for this beer. But trust us, it\'s fucking delicious!'
       }
+
       let beer = {
         name: beer_json.name,
         image: beer_json.image_url,

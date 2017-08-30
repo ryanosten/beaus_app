@@ -13,6 +13,13 @@ block content
         div.col-md-8
           h4.mt-5 Description
           p #{beer.description}
+      div.row
+        each store in stores
+          div.col-md-3
+            p #{store.name}
+            p #{store.address}
+            p #{store.city}, #{store.postal_code}
+            p #{store.telephone}
   // jQuery first, then Tether, then Bootstrap JS.
   script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
   |
